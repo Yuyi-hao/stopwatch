@@ -44,7 +44,10 @@ export default function Home() {
   };
   return (
     <>
-    <main className="rounded-xl bg-green-600 flex flex-col gap-12 shadow-2xl px-8 py-8">
+    <main className="relative rounded-xl bg-green-600 flex flex-col gap-12 shadow-2xl px-8 py-8">
+      <div className="absolute -top-17 left-1/2 transform translate-x-1/2 ">
+        <img src="assets/images/summer-pusheen.gif" alt="" className="w-30" />
+      </div>
       <h1 className="text-3xl font-bold text-center text-shadow-indigo-200">Stopwatch</h1>
       <p className="text-orange-400 font-bold text-6xl text-center" aria-live="polite">{formatTime(elaspedTime)}</p>
       <div className="flex flex-row place-content-center">
