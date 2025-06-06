@@ -1,5 +1,4 @@
 "use client"
-import Image from "next/image";
 import { useRef, useState } from "react";
 
 
@@ -37,16 +36,16 @@ export default function Home() {
     intervalRef.current = null;
   }
   const formatTime = (time: number) => {
-    let minutes = Math.floor(time/60000);
-    let seconds = Math.floor((time%60000)/1000);
-    let milliseconds = Math.floor((time%1000)/10);
+    const minutes = Math.floor(time/60000);
+    const seconds = Math.floor((time%60000)/1000);
+    const milliseconds = Math.floor((time%1000)/10);
     return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}:${milliseconds.toString().padStart(2, '0')}`;
   };
   return (
     <>
     <main className="relative rounded-xl bg-green-600 flex flex-col gap-12 shadow-2xl px-8 py-8">
       <div className="absolute -top-17 left-1/2 transform translate-x-1/2 ">
-        <img src="assets/images/summer-pusheen.gif" alt="" className="w-30" />
+        <img src="/assets/images/summer-pusheen.gif" alt="Pusheen" className="w-30" />
       </div>
       <h1 className="text-3xl font-bold text-center text-shadow-indigo-200">Stopwatch</h1>
       <p className="text-orange-400 font-bold text-6xl text-center" aria-live="polite">{formatTime(elaspedTime)}</p>
